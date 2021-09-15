@@ -12,8 +12,18 @@ spec:
       name:
       ports:
       resources:
+        limits:
+          cpu: 100m
+          memory: 100M
+        requests:
+          cpu: 100m
+          memory: 100M
       volumeMounts:
-      workingDir:
+        -
+          mountPath: /app/
+          name: public
+          readOnly: true
+      workingDir: /app/
   initContainers:
     -
       args: 
