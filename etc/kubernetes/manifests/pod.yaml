@@ -6,7 +6,12 @@ spec:
   containers:
     -
       args:
-      command:
+        - -f
+        - index.php
+        - -S
+        - 0.0.0.0:80
+      command: 
+        - /usru/bin/php
       env:
         -
           name: author
@@ -64,4 +69,9 @@ spec:
           readOnly: false
       workingDir: /private/
   volumes:
+    -
+      emptyDir:
+        medium: Memory
+        sizeLimit: 1M
+      name:
 status: {}
