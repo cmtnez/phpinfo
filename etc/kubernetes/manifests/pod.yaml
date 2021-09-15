@@ -73,5 +73,10 @@ spec:
       emptyDir:
         medium: Memory
         sizeLimit: 1M
-      name:
+      name: public
+    -
+      emptyDir:
+        medium: Memory
+        sizeLimit: 1M
+      name: private
 status: {}
