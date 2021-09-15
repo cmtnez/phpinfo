@@ -9,9 +9,9 @@ spec:
         - -f
         - index.php
         - -S
-        - 0.0.0.0:80
+        - 0.0.0.0:8080
       command: 
-        - /usru/bin/php
+        - /usr/bin/php
       env:
         -
           name: author
