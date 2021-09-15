@@ -8,9 +8,12 @@ spec:
       args:
       command:
       env:
-      image:
-      name:
+      image: 
+      name: phpinfo-container
       ports:
+        -
+          containerPort: 8080
+          protocol: TCP
       resources:
         limits:
           cpu: 100m
