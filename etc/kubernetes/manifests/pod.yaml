@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: phpinfo-po
+spec:
+  containers:
+    -
+      args:
+      command:
+      env:
+      image:
+      name:
+      ports:
+      resources:
+      volumeMounts:
+      workingDir:
+  initContainers:
+    -
+      args:
+      command:
+      env:
+      image:
+      name:
+      resources:
+      volumeMounts:
+      workingDir:
+  volumes:
+status: {}
