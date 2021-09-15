@@ -8,7 +8,10 @@ spec:
       args:
       command:
       env:
-      image: 
+        -
+          name: author
+          value: CarlosMartinez
+      image: cmtnez/phpinfo:latest
       name: phpinfo-container
       ports:
         -
