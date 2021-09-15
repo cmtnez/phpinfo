@@ -16,13 +16,36 @@ spec:
       workingDir:
   initContainers:
     -
-      args:
+      args: 
+        - git clone https://github.com/cmtnez/phpinfo ;
+        - cd phpinfo ;
+        - git checkout 2021-09-santander-cmr ;
+        - cp -r src/index.php /public/ ;
       command:
+        - /bin/sh
+        - -c
       env:
-      image:
-      name:
+        -
+          name: author
+          value: CarlosMartinez
+      image: alpine/git:1.0.30@sha256:0595334722a2d486ed7c1a10a9138180f052343d5569942ecceb88d6e7fd1c0f
+      name: phpinfo-git
       resources:
+        limits:
+          cpu: 100m
+          memory: 100M
+        requests:
+          cpu: 100m
+          memory: 100M
       volumeMounts:
-      workingDir:
+        -
+          mountPath: /private/
+          name: private
+          readOnly: false
+        -
+          mountPath: /public/
+          name: public
+          readOnly: false
+      workingDir: /private/
   volumes:
 status: {}
