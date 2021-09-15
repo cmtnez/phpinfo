@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# Esto hace...
 git clone https://github.com/cmtnez/phpinfo
 cd phpinfo
 git checkout 2021-09-santander-cmr
@@ -12,7 +11,7 @@ docker image build \
   --tag local/phpinfo:test \
   ./
 
-# Esto hace...
+# Esto despliega la imagen
 docker network create phpinfo
 docker container run \
   --cpus '0.1' \
