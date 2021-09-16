@@ -60,7 +60,7 @@ spec:
           mountPath: /public/
           name: public
           readOnly: false
-      workingDir: /private/
+      workingDir: /public/
   volumes:
     -
       emptyDir:
