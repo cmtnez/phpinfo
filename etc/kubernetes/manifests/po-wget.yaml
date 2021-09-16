@@ -19,7 +19,7 @@ spec:
       image: cmtnez/phpinfo:latest
       livenessProbe:
         tcpSocket:
-          port:8080
+          port: 8080
       name: phpinfo-container
       ports:
         -
