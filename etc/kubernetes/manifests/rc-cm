@@ -24,8 +24,8 @@ spec:
           env:
             -
               name: author
-              value: Ganimedes
-          image: ganimedescolomar/phpinfo:latest
+              value: CarlosMartinez
+          image: cmtnez/phpinfo:latest
           livenessProbe:
             tcpSocket:
               port: 8080
@@ -54,8 +54,6 @@ spec:
           workingDir: /app/
       volumes:
         -
-          ## wget https://raw.githubusercontent.com/ganimedes-colomar/phpinfo/2021-09-santander/src/index.php
-          ## kubectl create -n gca-phpinfo-github cm index.php --from-file index.php
           configMap:
             defaultMode: 0400
             items:
