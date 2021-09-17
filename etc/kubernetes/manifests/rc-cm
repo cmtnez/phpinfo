@@ -63,3 +63,4 @@ spec:
                 path: index.php
             name: index.php
           name: public
+
